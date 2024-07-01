@@ -1,8 +1,14 @@
 import Bubble from "../components/reusable/Bubble";
 import Input from "../components/reusable/Input";
 import Button from "../components/reusable/Button";
-import NavBar from "../components/nav/NavBar";
+import NavBar from "../components/nav/NavBar"
 import BubblePanel from "../components/reusable/BubblePanel";
+import { useState } from "react";
+import { useNavigate, Outlet } from "react-router-dom";
+import { setUser } from "../store/slices/userSlice";
+import Axios from "axios";
+import { MdAccountCircle, MdLockOpen } from "react-icons/md";
+import AuthHeader from "../components/reusable/AuthHeader";
 
 const CreatePage = () => {
 	
