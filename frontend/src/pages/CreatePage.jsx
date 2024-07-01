@@ -26,16 +26,17 @@ const CreatePage = () => {
     //TODO: Finish Creation Function
     const doCreate = async (e) => {
 
-    setErrorMessage("");
-    
-    //TODO: Finish branch conditions
-    if(
-        projectTitle !== "" &&
-        startDate !== "" &&
-        deadline !== "" &&
-        description !== "" &&
-        expectations !== ""
-    ){
+	setErrorMessage("");
+	    
+	//TODO: Finish branch conditions
+	if(
+		projectTitle !== "" &&
+		startDate !== "" &&
+		deadline !== "" &&
+		description !== "" &&
+		expectations !== ""
+	){
+		
         //TODO: May want to add Form Validation (start date vs deadline checking, making sure roles are present, etc.)
         const validProject = () => {
             
