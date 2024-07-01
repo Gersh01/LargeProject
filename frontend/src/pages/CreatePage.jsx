@@ -7,24 +7,24 @@ import BubblePanel from "../components/reusable/BubblePanel";
 const CreatePage = () => {
 	
   const [projectTitle, setProjectTitle] = useState("");
-	const [startDate, setStartDate] = useState("");
-	const [deadline, setDeadline] = useState("");
-	const [description, setDescription] = useState("");
-	const [expectations, setExpectations] = useState("");
-	const [isOpen, setOpen] = useState(true);
-	const [isDone, setDone] = useSate(false);
-	const [isStarted, setIsStarted] = useState(false);
-	const [dateCreated, setDateCreated] = ("TO BE UPDATED");
-	const [ownerID, setOwnerID] = user._id;
-	const [currentVsRequired, setCurrentVsRequired] = useState();
-	const [technologies, setTechnologies] = useState([]);
-	const [roles, setRoles] = useState([]);
+  const [startDate, setStartDate] = useState("");
+  const [deadline, setDeadline] = useState("");
+  const [description, setDescription] = useState("");
+  const [expectations, setExpectations] = useState("");
+  const [isOpen, setOpen] = useState(true);
+  const [isDone, setDone] = useSate(false);
+  const [isStarted, setIsStarted] = useState(false);
+  const [dateCreated, setDateCreated] = ("TO BE UPDATED");
+  const [ownerID, setOwnerID] = user._id;
+  const [currentVsRequired, setCurrentVsRequired] = useState();
+  const [technologies, setTechnologies] = useState([]);
+  const [roles, setRoles] = useState([]);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-	//TODO: Finish Creation Function
-	const doCreate = async (e) => {
+  //TODO: Finish Creation Function
+  const doCreate = async (e) => {
 
   setErrorMessage("");
   
