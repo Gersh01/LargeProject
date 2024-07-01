@@ -6,77 +6,77 @@ import BubblePanel from "../components/reusable/BubblePanel";
 
 const CreatePage = () => {
 	
-  const [projectTitle, setProjectTitle] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [deadline, setDeadline] = useState("");
-  const [description, setDescription] = useState("");
-  const [expectations, setExpectations] = useState("");
-  const [isOpen, setOpen] = useState(true);
-  const [isDone, setDone] = useSate(false);
-  const [isStarted, setIsStarted] = useState(false);
-  const [dateCreated, setDateCreated] = ("TO BE UPDATED");
-  const [ownerID, setOwnerID] = user._id;
-  const [currentVsRequired, setCurrentVsRequired] = useState();
-  const [technologies, setTechnologies] = useState([]);
-  const [roles, setRoles] = useState([]);
+    const [projectTitle, setProjectTitle] = useState("");
+    const [startDate, setStartDate] = useState("");
+    const [deadline, setDeadline] = useState("");
+    const [description, setDescription] = useState("");
+    const [expectations, setExpectations] = useState("");
+    const [isOpen, setOpen] = useState(true);
+    const [isDone, setDone] = useSate(false);
+    const [isStarted, setIsStarted] = useState(false);
+    const [dateCreated, setDateCreated] = ("TO BE UPDATED");
+    const [ownerID, setOwnerID] = user._id;
+    const [currentVsRequired, setCurrentVsRequired] = useState();
+    const [technologies, setTechnologies] = useState([]);
+    const [roles, setRoles] = useState([]);
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-  //TODO: Finish Creation Function
-  const doCreate = async (e) => {
+    //TODO: Finish Creation Function
+    const doCreate = async (e) => {
 
-  setErrorMessage("");
-  
-  //TODO: Finish branch conditions
-  if(
-    projectTitle !== "" &&
-    startDate !== "" &&
-    deadline !== "" &&
-    description !== "" &&
-    expectations !== ""
+    setErrorMessage("");
+    
+    //TODO: Finish branch conditions
+    if(
+        projectTitle !== "" &&
+        startDate !== "" &&
+        deadline !== "" &&
+        description !== "" &&
+        expectations !== ""
     ){
-      //TODO: May want to add Form Validation (start date vs deadline checking, making sure roles are present, etc.)
-      const validProject = () => {
-
-      }
-      
-      //TODO: Function to calculate group size via counting of roles
-
-
-      const newProject = {
-        isOpen: isOpen,
-        isDone: isDone,
-        isStarted: isStarted,
-        dateCreated: dateCreated,
-        ownerID: ownerID,
-        currentVsRequired: currentVsRequired,
-        deadline: deadline,
-        projectStartDate: startDate,
-        roles: roles,
-        technologies: technologies,
-        title: projectTitle,
-        description: description
-      };
-
-      try{
-        const response = await Axios.post(
-          "http://localhost:5000/api/projects",
-          newProject
-        );
-        console.log(response.status);
-        if(response && response.status === 201) {
-          console.log("Positive response");
-          //TODO: Immediately Navigate to created project
-          navigate("/project");
+        //TODO: May want to add Form Validation (start date vs deadline checking, making sure roles are present, etc.)
+        const validProject = () => {
+            
         }
+      
+        //TODO: Function to calculate group size via counting of roles
 
-      } catch(err) {
-        //TODO: Create Error messages based on errors messages from API
+
+        const newProject = {
+            isOpen: isOpen,
+            isDone: isDone,
+            isStarted: isStarted,
+            dateCreated: dateCreated,
+            ownerID: ownerID,
+            currentVsRequired: currentVsRequired,
+            deadline: deadline,
+            projectStartDate: startDate,
+            roles: roles,
+            technologies: technologies,
+            title: projectTitle,
+            description: description
+        };
+
+        try{
+            const response = await Axios.post(
+                "http://localhost:5000/api/projects",
+                newProject
+            );
+            console.log(response.status);
+            if(response && response.status === 201) {
+                console.log("Positive response");
+                //TODO: Immediately Navigate to created project
+                navigate("/project");
+            }
+
+            } catch(err) {
+            //TODO: Create Error messages based on errors messages from API
         
-      }
+            }
+        };
     };
-  };
 
 	return (
 		<div>
