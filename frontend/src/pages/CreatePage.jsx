@@ -6,9 +6,7 @@ import BubblePanel from "../components/reusable/BubblePanel";
 
 const CreatePage = () => {
 	
-	//TODO: Finish Creation Function
-	const doCreate = async (e) => {
-	const [projectTitle, setProjectTitle] = useState("");
+  const [projectTitle, setProjectTitle] = useState("");
 	const [startDate, setStartDate] = useState("");
 	const [deadline, setDeadline] = useState("");
 	const [description, setDescription] = useState("");
@@ -22,27 +20,29 @@ const CreatePage = () => {
 	const [technologies, setTechnologies] = useState([]);
 	const [roles, setRoles] = useState([]);
 
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  //TODO: Finish Creation Function
-  const doCreate = async (e) => {
-    setErrorMessage("");
-    if(
-      //TODO: Must correctly build these out    
-      projectTitle !== "" &&
-      startDate !== "" &&
-      deadline !== "" &&
-      description !== "" &&
-      expectations !== ""
+	//TODO: Finish Creation Function
+	const doCreate = async (e) => {
+
+  setErrorMessage("");
+  
+  //TODO: Finish branch conditions
+  if(
+    projectTitle !== "" &&
+    startDate !== "" &&
+    deadline !== "" &&
+    description !== "" &&
+    expectations !== ""
     ){
-      //TODO: May want to add Form validation (start date vs deadline checking, making sure roles are present, etc.)
+      //TODO: May want to add Form Validation (start date vs deadline checking, making sure roles are present, etc.)
       const validProject = () => {
 
       }
       
       //TODO: Function to calculate group size via counting of roles
+
 
       const newProject = {
         isOpen: isOpen,
@@ -72,11 +72,11 @@ const CreatePage = () => {
         }
 
       } catch(err) {
-        //TODO: Create Error messages based on error messages from API
+        //TODO: Create Error messages based on errors messages from API
         
       }
     };
-	};
+  };
 
 	return (
 		<div>
