@@ -8,7 +8,7 @@ const PasswordSettings = () => {
 
   const resetPassword = async () => {
     try {
-      const response = await Axios.put(
+      const response = await Axios.post(
         apiDomain + "/api/users/password",
         {},
         { withCredentials: true }
